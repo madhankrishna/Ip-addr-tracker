@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icon-location.svg">
+  
+  <title> IP Address Tracker</title>
+  <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+  />
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+  <section class="container">
+    <header>
+       <h1 class="tittle">IP Address Tracker</h1>
+       <form action="">
+         <input type="text" id="input" alt="users ip address" placeholder="Search for any IP address or domain">
+         <button type="submit" id="btn">
+            <img src="./images/icon-arrow.svg" alt="icon-arrow" />
+         </button>
+       </form>
+    </header>
+
+    <div class="result-area">
+      <div class="div">
+        <p class="head">IP Address</p>
+        <p class="sub-head" id="ip-add"></p>
+      </div>
+      <div class="div">
+        <p class="head">Location</p>
+        <p class="sub-head" id="loc"></p>
+      </div>
+      <div class="div">
+        <p class="head">Timezone</p>
+        <p class="sub-head" id="tz"></p>
+      </div>
+      <div class="div last">
+        <p class="head last">ISP</p>
+        <p class="sub-head" id="isp"></p>
+      </div>
+    </div>
+
+    <div id="mapid"></div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+  ></script>
+  <script src="./app.js"></script>
+  
+</body>
+</html>
